@@ -23,8 +23,8 @@ llm_clients:
     base_url: "http://localhost:8001/v1"
     api_key: "local"
     vllm:
-      model: "Gael1125/Qwen3.6-27B-Lora-3"
-      revision: "0b1fe6ae41836fa87a5d938c54ccf6ff1b037abe"
+      model: "Gael1125/Qwen3.6-27B-Lora-4"
+      revision: "04e79a9a41648e6cc0ee7a9c68535fbc8f463297"
       gpu_ids: "0,1"
       tensor_parallel_size: 1
       data_parallel_size: 2
@@ -55,7 +55,7 @@ embedder:
 actors:
   planner:
     client: "coder-instance"
-    model: "Gael1125/Qwen3.6-27B-Lora-3"
+    model: "Gael1125/Qwen3.6-27B-Lora-4"
     workers: 256
     queue_size: 128
     max_tokens: 32768
@@ -73,7 +73,7 @@ actors:
       allow_fallbacks: true
   coder:
     client: "coder-instance"
-    model: "Gael1125/Qwen3.6-27B-Lora-3"
+    model: "Gael1125/Qwen3.6-27B-Lora-4"
     workers: 256
     queue_size: 128
     max_tokens: 24576
